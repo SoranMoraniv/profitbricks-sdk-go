@@ -453,7 +453,7 @@ func getImageID(location string, imageName string, imageType string) string {
 			if imageType == "SSD" {
 				imageType = "HDD"
 			}
-			if imgName != "" && strings.Contains(strings.ToLower(imgName), strings.ToLower(imageName)) && i.Properties.ImageType == imageType && i.Properties.Location == location && i.Properties.Public == true {
+			if imgName != "" && strings.Contains(strings.ToLower(imgName), strings.ToLower(imageName)) && i.Properties.ImageType == imageType && i.Properties.Location == location {
 				return i.ID
 			}
 		}
